@@ -28,8 +28,8 @@ User.all.each do |user|
 
     planet = Planet.create!(
       {
-        name: Faker::Space.galaxy,
-        location: Faker::Address.street_address,
+        name: Faker::Movies::StarWars.planet,
+        location: Faker::Space.galaxy,
         price: rand(5000..15_000),
         user_id: user.id
       }
