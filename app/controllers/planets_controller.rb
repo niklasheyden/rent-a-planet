@@ -1,5 +1,4 @@
 class PlanetsController < ApplicationController
-<<<<<<< HEAD
 before_action :set_planet, only: [:show]
   def index
     @planets = policy_scope(Planet)
