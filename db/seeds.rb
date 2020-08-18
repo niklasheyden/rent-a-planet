@@ -10,18 +10,19 @@ require 'faker'
 
 Planet.destroy_all
 User.destroy_all
+p 'generating planets'
 
 5.times do
   user = User.create!(
       {
-        name: Faker::FunnyName.name,
+        # name: Faker::FunnyName.name,
         email: Faker::Internet.email,
-        password: Faker::Internet.password
+        password: '123456'
       }
     )
   p user
 end
-
+p "#{User.count} were created"
 
 User.all.each do |user|
   rand(1..4).times do
@@ -35,6 +36,8 @@ User.all.each do |user|
       }
     )
   end
+p "#{Planet.count} were created"
+
  # planet.user = user
 
 

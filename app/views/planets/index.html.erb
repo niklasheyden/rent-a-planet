@@ -1,0 +1,15 @@
+<div class="container">
+  <ul>
+  <% @planets.each do |planet| %>
+    <li>
+      <h1><%= planet.name %></h1>
+      <br>
+      <p><%=planet.location %></p>
+      <br>
+      <p><%= planet.price%> euros</p>
+      <br>
+      <p><%= link_to 'Show details', planet_path(planet) %> </p>
+    </li>
+  <% end %>
+  </ul>
+</div>
