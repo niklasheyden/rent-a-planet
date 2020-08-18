@@ -1,2 +1,35 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "components/banner";
+@import "components/buttons";
+@import "components/cards";
+
+.cards-galaxy {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.flat-line{
+  width: 35px;
+  height: 4px;
+  background: #01C5BB;
+  margin-bottom: 1em;
+  border-radius: 6px;
+}
+
+.home-title {
+  font-size: 24px;
+}
+
+.cards-planet  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.lighter-background{
+  padding-top: 32px;
+  margin-bottom: 32px;
+  background-color: rgb(18, 18, 18);
+}
