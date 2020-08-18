@@ -1,0 +1,10 @@
+<div>
+  <p>
+    You have booked
+    <%= @booking.planet.name %>
+  </p>
+</div>
+
+<p> Checkin Date <%= @booking.checkin_date %> </p>
+<p> Checkout Date <%= @booking.checkout_date %> </p>
+<%= link_to "Back to planets", planets_path%>
