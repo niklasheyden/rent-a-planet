@@ -1,0 +1,85 @@
+.card-galaxy {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: inline-block;
+  margin-bottom: 64px;
+  border-radius: 15px;
+}
+
+.card-galaxy > img {
+  height: 200px;
+  width: 25vw;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card-galaxy h2 {
+  font-size: 24px;
+  font-style: italic;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.card-planet {
+  width: 25vw;
+  overflow: hidden;
+  background: #202020;;
+  box-shadow: 0 0 15px rgba(30, 30, 30, 0.5);
+  border-radius: 15px;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.card-planet > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-planet h2 {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8 0 8 0;
+
+}
+
+.planet-name {
+  color: white !important;
+  margin-left: 4px;
+  margin-top: 8px;
+}
+
+
+.card-planet p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  opacity: .7;
+  margin-left: 24px;
+  margin-top: 8px;
+}
+
+
+.card-planet .card-planet-infos {
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-planet-infos i {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 8px;
+  width: 40px;
+  bottom: 20px;
+}
+
+
