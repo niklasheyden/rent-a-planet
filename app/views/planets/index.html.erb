@@ -13,3 +13,8 @@
   <% end %>
   </ul>
 </div>
+
+
+<% if  policy(Planet).new? %>
+  <%= link_to 'Create A Planet', new_planet_path %>
+<% end %>
