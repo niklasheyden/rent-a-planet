@@ -1,0 +1,65 @@
+#booking-confirmation-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1120px;
+  margin: 0 auto;
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .booking-location-container {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    margin-bottom: 60px;
+    h3 {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.5);
+      margin-left: 10px;
+      font-size: 20px;
+    }
+  }
+}
+
+.booking-summary {
+  width: 70%;
+  h6 {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+}
+
+.booking-image {
+  width: 30%;
+  img {
+    max-width: 500px;
+    border-radius: 12px;
+  }
+}
+
+.confirmation-button-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  margin-top: 60px;
+  .confirmation-button {
+    background-color: #01C5BB;
+    width: 170px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-align: center;
+    a {
+      color: white !important;
+      text-decoration: none;
+    }
+  }
+}
+
+.booking-image {
+  background-image: url('https://images.unsplash.com/photo-1545156521-77bd85671d30?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=daniel-olah-gEta6dbzFy0-unsplash.jpg');
+  width:  500px;
+  height: 300px;
+  background-position: center;
+  border-radius: 12px;
+}
