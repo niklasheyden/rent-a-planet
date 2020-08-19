@@ -6,8 +6,6 @@
 @import "show";
 
 
-
-
 .flat-line{
   width: 35px;
   height: 4px;
@@ -21,10 +19,18 @@
   font-size: 24px;
 }
 
-.planet-selection {
-   margin-top: 2.3em;
+.container-home {
+  margin: auto;
+  width: 1140px;
+  margin-top: 0 !important;
   font-size: 24px;
+  padding-left: 64px;
 }
+
+.planet-selection {
+  font-size: 24px
+}
+
 
 .create p {
   font-style: italic;
@@ -37,7 +43,6 @@
 }
 
 .lighter-background{
-  padding-top: 32px;
-  margin-bottom: 32px;
   background-color: rgb(18, 18, 18);
+  margin-bottom: 32px;
 }
