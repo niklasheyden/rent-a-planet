@@ -1,0 +1,39 @@
+.banner {
+  position: relative;
+  padding: 150px 0;
+  height: 650px;
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+  url(https://images.unsplash.com/photo-1545156521-77bd85671d30?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=daniel-olah-gEta6dbzFy0-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.banner h1 {
+  position: absolute;
+  left: 64px;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 64px;
+  font-weight: bold;
+  width: 50%;
+  margin-bottom: 24px;
+}
+
+.banner p {
+  position: absolute;
+  left: 64px;
+  bottom: 210px;
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  width: 40%;
+}
+
+.btn-home{
+  position: absolute;
+  bottom: 104px;
+  left: 64px;
+}
