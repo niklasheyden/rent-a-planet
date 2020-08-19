@@ -12,10 +12,13 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Home", planets_path, class: "nav-link", id: "nav-link-item" %>
+          <%= link_to "Home", '/', class: "nav-link", id: "nav-link-item" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Bookings", bookings_path, class: "nav-link", id: "nav-link-item" %>
+          <%= link_to "My Bookings", bookings_path, class: "nav-link", id: "nav-link-item" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "My Planets", planets_path, class: "nav-link", id: "nav-link-item" %>
         </li>
         <li class="nav-item">
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link", id: "nav-link-item"%>
