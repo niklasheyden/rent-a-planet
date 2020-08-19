@@ -1,8 +1,13 @@
-<h1> Your Booking are </h1>
+<h1> Your Bookings are </h1>
 
 
-<% @booking.each do |booking| %>
-<h6> <%= booking.planet.name %> </h6>
-<p> <%= booking.checkin_date%> </p>
-<p> <%= booking.checkout_date%> </p>
-<% end %>
+
+
+  <% @booking.each do |booking| %>
+  <% if current_user == booking.user %>
+  <h6> <%= booking.planet.name %> </h6>
+  <h6> <%= booking.user_id %> </h6>
+  <p> <%= booking.checkin_date%> </p>
+  <p> <%= booking.checkout_date%> </p>
+  <% end %>
+  <% end %>
