@@ -1,3 +1,48 @@
 .container {
   padding: 64px;
 }
+
+.grid-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "title-capacity title-capacity Booking-button" "planet-description planet-description user-photo-name";
+}
+
+.title-capacity {
+  grid-area: title-capacity;
+}
+
+.title-capacity p {
+  opacity: 0.5;
+}
+
+.planet-description {
+  grid-area: planet-description;
+}
+
+.Booking-button {
+  grid-area: Booking-button;
+}
+
+.user-photo-name {
+  grid-area: user-photo-name;
+}
+
+.booking-button {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.booking-button a {
+  padding: 16px 40px;
+  background-color: #01C5BB;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0px 0px 48px rgba(0, 0, 0, 0.2);
+  color: white;
+  transition: background 0.3s ease;
+}
+
