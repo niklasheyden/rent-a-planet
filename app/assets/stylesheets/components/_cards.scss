@@ -75,7 +75,6 @@
   font-size: 16px;
   opacity: .7;
   margin-left: 24px;
-  margin-top: 8px;
 }
 
 
@@ -84,7 +83,6 @@
   padding: 4px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   position: relative;
 }
 
@@ -93,13 +91,13 @@
   position: absolute;
   left: 12px;
   width: 40px;
-  bottom: 24px;
+  bottom: 20px;
 }
 
 .card-planet-pricing{
   position: absolute;
   right: 8px;
-  bottom: 16px;
+  bottom: 5px;
 }
 
 
