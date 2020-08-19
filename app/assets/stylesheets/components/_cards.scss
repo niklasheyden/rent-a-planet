@@ -1,3 +1,8 @@
+.cards-galaxy {
+  display: flex;
+  justify-content: space-between;
+}
+
 .card-galaxy {
   position: relative;
   text-align: center;
@@ -10,8 +15,8 @@
 }
 
 .card-galaxy > img {
+  width: 300px;
   height: 200px;
-  width: 25vw;
   object-fit: cover;
   border-radius: 15px;
 }
@@ -27,8 +32,16 @@
 }
 
 
+.cards-planet  {
+  margin: 0 auto;
+  width: 1120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  gap: 32px 64px;
+}
+
 .card-planet {
-  width: 25vw;
   overflow: hidden;
   background: #202020;;
   box-shadow: 0 0 15px rgba(30, 30, 30, 0.5);
@@ -59,27 +72,32 @@
 
 .card-planet p {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 12px;
+  font-size: 16px;
   opacity: .7;
   margin-left: 24px;
-  margin-top: 8px;
 }
 
 
 .card-planet .card-planet-infos {
+  height: 78px;
   padding: 4px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   position: relative;
 }
 
 .card-planet-infos i {
   color: rgba(255, 255, 255, 0.5);
   position: absolute;
-  left: 8px;
+  left: 12px;
   width: 40px;
   bottom: 20px;
+}
+
+.card-planet-pricing{
+  position: absolute;
+  right: 8px;
+  bottom: 5px;
 }
 
 

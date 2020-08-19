@@ -1,7 +1,7 @@
 .banner {
-  position: relative;
+  // position: relative;
   padding: 150px 0;
-  height: 650px;
+  height: 100vh;
   background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
   url(https://images.unsplash.com/photo-1545156521-77bd85671d30?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=daniel-olah-gEta6dbzFy0-unsplash.jpg);
   background-size: cover;
@@ -10,21 +10,19 @@
 }
 
 .banner h1 {
-  position: absolute;
-  left: 64px;
+  padding-bottom: 16px;
+  padding-left: 32px;
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 64px;
   font-weight: bold;
-  width: 50%;
-  margin-bottom: 24px;
+  width: 60%;
 }
 
 .banner p {
-  position: absolute;
-  left: 64px;
-  bottom: 210px;
+  padding-left: 32px;
+  padding-bottom: 32px;
   font-size: 20px;
   color: white;
   opacity: .7;
@@ -33,7 +31,6 @@
 }
 
 .btn-home{
-  position: absolute;
-  bottom: 104px;
-  left: 64px;
+  margin-top: 32px;
+  margin-left: 32px;
 }
