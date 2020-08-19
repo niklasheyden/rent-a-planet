@@ -6,11 +6,7 @@
 @import "show";
 
 
-.cards-galaxy {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
+
 
 .flat-line{
   width: 35px;
@@ -21,13 +17,23 @@
 }
 
 .home-title {
+  margin-top: 1em;
   font-size: 24px;
 }
 
-.cards-planet  {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.planet-selection {
+   margin-top: 2.3em;
+  font-size: 24px;
+}
+
+.create p {
+  font-style: italic;
+}
+
+.create {
+  text-align: center;
+  margin-bottom: 128px;
+  margin-top: 64px;
 }
 
 .lighter-background{
