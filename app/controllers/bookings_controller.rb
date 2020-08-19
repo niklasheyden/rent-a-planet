@@ -1,7 +1,9 @@
 class BookingsController < ApplicationController
    def index
     @booking = policy_scope(Booking)
+    authorize @booking
   end
+
   def new
     #raise
     @booking = Booking.new
@@ -31,4 +33,5 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:checkin_date, :checkout_date)
   end
+
 end

@@ -4,6 +4,11 @@ class BookingPolicy < ApplicationPolicy
       scope.all
     end
   end
+
+  def index?
+    true
+  end
+
   def create?
     true
   end
@@ -12,7 +17,11 @@ class BookingPolicy < ApplicationPolicy
     true
   end
 
-  def index?
-    true
+  def update?
+    user == record.user
+  end
+
+  def destroy?
+    user == record.user
   end
 end
