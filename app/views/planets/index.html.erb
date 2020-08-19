@@ -2,11 +2,10 @@
 
 
 
-
   <% @planets.each do |planet| %>
   <% if current_user == planet.user %>
   <h6> <%= planet.name %> </h6>
-
+  <%= link_to 'Edit', planets_path %>
+  <%= link_to 'Delete', planets_path %>
   <% end %>
   <% end %>
-
