@@ -11,7 +11,7 @@
   </div>
 
   <div class="grid-container">
-  <div class="img-big"></div>
+  <div class="img-big"><%= cl_image_tag @planet.photo.key, height: 300, width: 500, crop: :fill %></div>
   <div class="img-small"></div>
   <div class="img-small-2"></div>
   <div class="img-small-3"></div>

@@ -30,7 +30,7 @@ skip_before_action :authenticate_user!, only: :show
   private
 
   def planet_params
-    params.require(:planet).permit(:name, :location, :price)
+    params.require(:planet).permit(:name, :location, :price, :photo)
   end
 
   def set_planet
