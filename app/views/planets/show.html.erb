@@ -1,7 +1,32 @@
 <div class="container">
-  <h1><%= @planet.name %></h1>
-  <br>
-  <p><%= @planet.location %> </p>
-  <p><%= @planet.price %> </p>
-  <p><%= @planet.user_id %> </p>
+
+  <div class="shizzle">
+      <h1><%= @planet.name %></h1>
+      <p><%= @planet.price %>€/day</p>
+  </div>
+
+  <div class="planet-location">
+    <i class="fas fa-map-marker-alt"></i>
+    <p><%= @planet.location %> </p>
+  </div>
+
+<!--   <div class="images-display">
+    <div class="img-big"></div>
+    <div class="img-small"></div>
+    <div class="img-small-2"></div>
+    <div class="img-small-3"></div>
+    <div class="img-small-4"></div>
+  </div> -->
+  <div class="grid-container">
+  <div class="img-big"></div>
+  <div class="img-small"></div>
+  <div class="img-small-2"></div>
+  <div class="img-small-3"></div>
+  <div class="img-small-4"></div>
 </div>
+
+  <div class="planet-description">
+  <p><%= @planet.user_id %> </p>
+  <p><%= @planet.description %></p>
+  </div>
+

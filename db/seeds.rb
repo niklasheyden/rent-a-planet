@@ -32,6 +32,7 @@ User.all.each do |user|
         name: Faker::Movies::StarWars.planet,
         location: Faker::Space.galaxy,
         price: rand(5000..15_000),
+        description: "Big and nice, this modern planet presents itself with a small plot in front, on which a beach chair conveys the right cosmic flair. In there somewhere there is a space cabine with a single bed and seating, a small kitchenette and a bathroom with shower.",
         user_id: user.id
       }
     )

@@ -21,6 +21,7 @@ before_action :set_planet, only: [:show]
   end
 
   def show
+    authorize @planet
   end
 
   private
@@ -28,6 +29,7 @@ before_action :set_planet, only: [:show]
   def planet_params
     params.require(:planet).permit(:name, :location, :price)
   end
+
   def set_planet
     @planet = Planet.find(params[:id])
   end
