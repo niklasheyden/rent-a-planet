@@ -38,8 +38,17 @@
 </div>
 </div>
 
-<a id="planets"></a>
-<div class="container-home">
+<div class="container-home" id="planets">
+  <div class="search-bar">
+    <%= form_tag "/#planets", class: "search-form", method: :get do%>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a planet"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
   <h2 class="planet-selection">Our selection of planets</h2>
   <div class="flat-line"></div>
 </div>
@@ -60,7 +69,6 @@
   </div>
   <% end %>
 </div>
-
 
 <div class="container create">
   <p>Do you own a planet ? Would you like to rent it with us</p>
