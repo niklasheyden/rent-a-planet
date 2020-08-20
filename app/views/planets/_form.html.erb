@@ -10,9 +10,19 @@
     <%= f.input :description %>
   </div>
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, id: 'submit-button' %>
   </div>
 <% end %>
 
 
 
+<div class="loader">
+  <%= image_tag "loading.gif" %> <br>
+  <p>Loading planet</p>
+</div>
+<script>
+  const submit = document.querySelector('#submit-button')
+  submit.addEventListener("click", function () {
+    const loader = document.querySelector(".loader");
+    loader.className += " hidden"; // class "loader hidden"
+});</script>
