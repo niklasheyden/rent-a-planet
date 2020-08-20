@@ -22,15 +22,26 @@
       <h2>Beautiful and huge entire planet to rent in <br>the middle of the galaxy</h2>
       <p>48 billion people capacity · 1 bed </p>
     </div>
-    <div class="planet-description">
-      <p><%= @planet.description %></p>
+      <div class="planet-description">
+        <p><%= @planet.description %></p>
+      </div>
+    <% if current_user.email != @planet.user.email %>
+      <div class="booking-button">
+        <%= link_to "Book this planet", new_planet_booking_path(@planet, @booking) %>
+      </div>
+      <% else %>
+      <div class="action-buttons">
+        <div class="action-button">
+          <%= link_to "Edit", edit_planet_path(@planet) %>
+        </div>
+        <div class="action-button">
+          <%= link_to "Delete", planet_path(@planet), method: :delete %>
+        </div>
+      </div>
+      <% end %>
+      <div class="user-photo-name"></div>
     </div>
-    <div class="booking-button">
-      <%= link_to "Book this planet", new_planet_booking_path(@planet, @booking) %>
-    </div>
-    <div class="user-photo-name"></div>
-  </div>
-  <%= link_to 'add a review', new_planet_review_path(@planet[:id])  %>
+    <%= link_to 'add a review', new_planet_review_path(@planet[:id])  %>
 </div>
 <div class="container">
   <h3>Reviews</h3>
