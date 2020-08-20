@@ -1,19 +1,27 @@
-<h1> Your Planets are </h1>
+<a id="planets"></a>
+<div class="container-home">
+  <h2 class="planet-selection">These are your planets</h2>
+  <div class="flat-line"></div>
+</div>
 
 
-
+<div class="cards-planet">
   <% @planets.each do |planet| %>
   <% if current_user == planet.user %>
-  <h6> <%= planet.name %> </h6>
-  <%= link_to 'Edit', edit_planet_path(planet) %>
-  <%= link_to 'Delete', planet_path(planet), method: :delete %>
+  <div class="card-planet">
+    <img src="https://images.unsplash.com/photo-1560507074-b9eb43faab00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" />
+    <div class="card-planet-infos">
+      <div>
+        <h2 class="planet-name"><%= link_to planet.name, planet_path(planet), class: "planet-name"  %></h2>
+        <p><%= planet.location %> </p>
+      </div>
+      <h2 class="card-planet-pricing"><%= planet.price %>€/day</h2>
+      <i class="fas fa-map-marker-alt"></i>
+    </div>
+  </div>
   <% end %>
   <% end %>
-
-
-
-<div class="container create">
-  <p>Do you own a planet ? Would you like to rent it with us</p>
+</div>
 
 
 <% if  policy(Planet).new? %>
