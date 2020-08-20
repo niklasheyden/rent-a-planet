@@ -13,10 +13,16 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Log in", class: "primary-color loginBtn", id:"primaryBtn" %>
+      <span class="loginBtn btn-padding", id="primaryBtn">
+       <%= f.button :submit, "Log in", class: "primary-color" %>
+      </span>
+
       <%= render "devise/shared/links" %>
     </div>
   <% end %>
-  <%= render "devise/shared/links-signup" %>
+  <div id="box">
+    <p class="signup-link"> Don't have an account?</p>
+    <%= render "devise/shared/links-signup" %>
+  </div>
 </div>
 

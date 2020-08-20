@@ -1,3 +1,15 @@
+.links {
+  color: white;
+}
+
+.signup-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-padding {
+  padding: 4px 12px !important;
+}
+
 #container{
   width: 430px;
   height: 548px;
@@ -8,6 +20,7 @@
   padding: 50px 40px;
 }
 
-#flexbox {
-  display: flex;
+#box {
+  width: 100px;
+  margin: 10px auto;
 }
