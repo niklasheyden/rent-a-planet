@@ -11,11 +11,11 @@
   </div>
 
   <div class="grid-container">
-  <div class="img-big"><%= cl_image_tag @planet.photo.key, height: 300, width: 500, crop: :fill %></div>
-  <div class="img-small"></div>
-  <div class="img-small-2"></div>
-  <div class="img-small-3"></div>
-  <div class="img-small-4"></div>
+  <div class="img-big"style="background-image: url('<%= cl_image_path @planet.photos[0].key, crop: :fill %>')"></div>
+  <div class="img-small-1"style="background-image: url('<%= cl_image_path @planet.photos[1].key, crop: :fill %>') "></div>
+  <div class="img-small-2"style="background-image: url('<%= cl_image_path @planet.photos[2].key, crop: :fill %>')"></div>
+  <div class="img-small-3"style="background-image: url('<%= cl_image_path @planet.photos[3].key, crop: :fill %>')"></div>
+  <div class="img-small-4"style="background-image: url('<%= cl_image_path @planet.photos[4].key, crop: :fill %>')"></div>
 </div>
 
  <div class="grid-info">
