@@ -1,6 +1,7 @@
+<div class="container">
 <%= simple_form_for(@planet) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<%= f.error_notification %>
+<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
     <%= f.input :name %>
@@ -15,14 +16,15 @@
 <% end %>
 
 
-
 <div class="loader">
-  <%= image_tag "loading.gif" %> <br>
-  <p>Loading planet</p>
+  <%= image_tag "loading.gif" %>
 </div>
 <script>
-  const submit = document.querySelector('#submit-button')
-  submit.addEventListener("click", function () {
+  const submit = document.querySelector("#new_planet");
+  submit.addEventListener("submit",  () => {
     const loader = document.querySelector(".loader");
-    loader.className += " hidden"; // class "loader hidden"
-});</script>
+    loader.classList.add("hidden") ; // class "loader hidden"
+  });</script>
+</div>
+
+
