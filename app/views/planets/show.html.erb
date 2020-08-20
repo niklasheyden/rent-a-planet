@@ -30,6 +30,15 @@
     </div>
     <div class="user-photo-name"></div>
   </div>
+  <%= link_to 'add a review', new_planet_review_path(@planet[:id])  %>
+</div>
+<div class="container">
+  <h3>Reviews</h3>
+<ul>
+<% @planet.reviews.each do |review| %>
+  <li><%= review.content %> | <%= review.rating %></li>
+<% end %>
+</ul>
 </div>
 
 
