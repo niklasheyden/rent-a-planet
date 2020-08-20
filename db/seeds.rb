@@ -7,9 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-
+Booking.destroy_all
 Planet.destroy_all
 User.destroy_all
+
 p 'generating planets'
 
 5.times do

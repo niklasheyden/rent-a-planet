@@ -1,12 +1,8 @@
 class PlanetPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      scope.where(user: user)
     end
-  end
-
-  def index?
-    record.user == user
   end
 
   def show?
@@ -15,6 +11,10 @@ class PlanetPolicy < ApplicationPolicy
 
   def create?
     true
+  end
+
+  def edit?
+    record.user == user
   end
 
   def update?
