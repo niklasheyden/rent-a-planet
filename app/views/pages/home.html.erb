@@ -8,8 +8,10 @@
 <div class="lighter-background">
 
 <div class="container">
-  <h2 class="home-title">Trending galaxies</h2>
-  <div class="flat-line"></div>
+  <div class="title-section">
+    <h2 class="home-title">Trending galaxies</h2>
+    <div class="flat-line"></div>
+  </div>
   <div class="cards-galaxy">
     <div class="card-galaxy">
       <img src="https://images.unsplash.com/photo-1538370965046-79c0d6907d47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1500&q=80" />
@@ -39,19 +41,20 @@
 </div>
 
 <div class="container-home" id="planets">
-  <div class="search-bar">
-    <%= form_tag "/#planets", class: "search-form", method: :get do%>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a planet"
-      %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+  <div class="left-planet-section">
+    <h2 class="planet-selection">Our selection of planets</h2>
+    <div class="flat-line"></div>
+  </div>
+  <div class="form-search">
+    <%= form_tag "/#planets", class: "simple_form search", method: :get do %>
+      <div class="search-form-control form-group">
+        <%= text_field_tag :query, params[:query], placeholder: "Find a planet", class: "form-control string required", id: "input-search" %>
+        <%= button_tag "Search", class: "btn btn-flat" %>
+      </div>
     <% end %>
   </div>
-  <h2 class="planet-selection">Our selection of planets</h2>
-  <div class="flat-line"></div>
 </div>
+
 
 
 <div class="cards-planet">
