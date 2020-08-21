@@ -9,3 +9,17 @@
 .btn-create {
   color: white !important;
 }
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  a {
+    text-decoration: none !important;
+    color: grey;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 0 6px;
+    margin-left: 10px;
+    padding: 5px 10px;
+  }
+}
