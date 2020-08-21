@@ -18,7 +18,7 @@
         <p> – </p>
         <p> <%= booking.checkout_date%> </p>
       </div>
-      <h2 class="planet-name"><%= link_to booking.planet.name, planet_path(booking.planet_id), class: "planet-name"  %></h2>
+      <h2 class="planet-name"><%= link_to booking.planet.name, planet_booking_path(booking.planet_id, booking), class: "planet-name"  %></h2>
       <div class="location-wrapper">
         <i class="fas fa-map-marker-alt"></i>
         <p><%= booking.planet.location %> </p>
