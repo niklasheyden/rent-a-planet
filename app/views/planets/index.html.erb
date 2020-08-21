@@ -63,13 +63,11 @@
           <h2 class="booking-status">Pending</h2>
         </div>
 
-        <div class="action-dots">
-          <a href="#">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </a>
-        </div>
+
+          <div class="button">
+            <i class="far fa-check-circle icon"></i>
+            <i class="far fa-times-circle icon"></i>
+          </div>
 
       </div>
 
@@ -78,3 +76,33 @@
   </div>
 
 </div>
+<script>
+  const action = document.querySelector('.far.fa-check-circle')
+  action.addEventListener('click', () => {
+  const pending = document.querySelector('.booking-status')
+  pending.innerHTML = 'Accepted';
+  const color = document.querySelector('.booking-status')
+  color.classList.add("accepted") ;
+  })
+
+</script>
+
+<script>
+  const rejected = document.querySelector('.far.fa-times-circle')
+  rejected.addEventListener('click', () => {
+  const pending = document.querySelector('.booking-status')
+  pending.innerHTML = 'Rejected';
+  const color = document.querySelector('.booking-status')
+  color.classList.add("rejected") ;
+  })
+
+</script>
+
+
+
+
+
+
+
+
+
