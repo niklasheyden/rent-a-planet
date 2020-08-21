@@ -12,7 +12,7 @@
 
 #container{
   width: 430px;
-  height: 548px;
+  height: auto;
   margin: 100px auto;
   border-radius: 12px;
   box-shadow: 10px 5px 5px black;
@@ -35,4 +35,8 @@
 
 .btn-margin {
   margin-top: 20px;
+}
+
+.align-center {
+  text-align: center;
 }
