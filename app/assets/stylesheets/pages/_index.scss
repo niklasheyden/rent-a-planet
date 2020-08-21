@@ -22,9 +22,8 @@
 .container-home {
   margin: auto;
   // margin-bottom: 32px;
-  width: 1140px;
+  width: 1010px;
   font-size: 24px;
-  padding-left: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,8 +53,21 @@
   margin-bottom: 32px;
 }
 
+#planets {
+  margin-bottom: 32px;
+}
 
 
+.controller {
+  background-color: rgb(18, 18, 18);
+}
 
+#input-search {
+  padding-left: 24px;
+}
 
+.planet-name a:hover {
+  text-decoration: none;
+  color: #01C5BB !important;
+}
 
