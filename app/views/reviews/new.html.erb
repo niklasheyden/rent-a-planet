@@ -1,0 +1,9 @@
+<div class="container">
+<h1>Create a new review for <%= @planet.name %></h1>
+
+<%= simple_form_for [@planet, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating %>
+ <%= f.button :submit %>
+<% end %>
+</div>

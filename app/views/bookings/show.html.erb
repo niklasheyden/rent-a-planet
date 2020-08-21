@@ -19,11 +19,11 @@
       </div>
     </div>
   </div>
-  <div class="booking-image"><%= cl_image_tag @booking.planet.photo.key, height: 300, width: 400, crop: :fill %>
+  <div class="booking-image"style="background-image: url('<%= cl_image_path @booking.planet.photos[0].key, crop: :fill %>')">
 
   </div>
 
 </div>
 
 
-
+<div class="img-big"></div>
