@@ -10,8 +10,10 @@
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.input :description %>
   </div>
-  <div class="form-actions">
-    <%= f.button :submit, id: 'submit-button' %>
+  <div class="form-actions btn-margin">
+    <span class="loginBtn btn-padding", id="primaryBtn">
+    <%= f.button :submit, id: 'submit-button', class:"links" %>
+  </span>
   </div>
 <% end %>
 
