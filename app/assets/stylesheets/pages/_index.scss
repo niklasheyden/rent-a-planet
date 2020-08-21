@@ -21,11 +21,13 @@
 
 .container-home {
   margin: auto;
+  margin-bottom: 32px;
   width: 1140px;
-  margin-top: 0 !important;
   font-size: 24px;
   padding-left: 64px;
-  padding-top: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .planet-selection {
@@ -47,3 +49,13 @@
   background-color: rgb(18, 18, 18);
   padding-bottom: 64px;
 }
+
+.title-section {
+  margin-bottom: 32px;
+}
+
+
+
+
+
+
