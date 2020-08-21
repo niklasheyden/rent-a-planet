@@ -1,0 +1,38 @@
+.date-wrapper {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  p {
+    margin: 0;
+    margin-left: 7px;
+  }
+  .fas {
+    margin: 0;
+  }
+}
+
+.location-wrapper {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  margin-top: 10px;
+  p {
+    margin: 0;
+    margin-left: 7px;
+    font-size: 12px;
+  }
+  .fas {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 7px;
+    font-size: 12px;
+  }
+}
+
+.booking-details {
+  padding: 10px;
+}
+
+#my-planets {
+  height: 100vh;
+}

@@ -1,13 +1,40 @@
-<h1> Your Bookings are </h1>
+<div id="my-planets">
+  <div class="container-home">
+    <div class="title-section">
+      <h2 class="planet-selection">Your  Bookings</h2>
+    <div class="flat-line"></div>
+  </div>
+</div>
 
 
-
-
+  <div class="cards-planet">
   <% @booking.each do |booking| %>
   <% if current_user == booking.user %>
-  <h6> <%= booking.planet.name %> </h6>
-  <h6> <%= booking.user_id %> </h6>
-  <p> <%= booking.checkin_date%> </p>
-  <p> <%= booking.checkout_date%> </p>
+  <div class="card-planet">
+    <%= cl_image_tag booking.planet.photos[0].key, crop: :fill, class: 'img' %>
+    <div class="booking-details">
+      <div class="date-wrapper">
+        <p> <%= booking.checkin_date%> </p>
+        <p> – </p>
+        <p> <%= booking.checkout_date%> </p>
+      </div>
+      <h2 class="planet-name"><%= link_to booking.planet.name, planet_path(booking.planet_id), class: "planet-name"  %></h2>
+      <div class="location-wrapper">
+        <i class="fas fa-map-marker-alt"></i>
+        <p><%= booking.planet.location %> </p>
+      </div>
+    </div>
+  </div>
   <% end %>
   <% end %>
+</div>
+  <div class="create-button-container">
+    <% if  policy(Planet).new? %>
+      <%= link_to 'Find More Planets', "/#planets", class: 'btn-flat btn-create' %>
+    <% end %>
+  </div>
+</div>
+</div>
+
+
+
