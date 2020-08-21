@@ -21,7 +21,8 @@
           <%= link_to "My Planets", planets_path, class: "nav-link", id: "nav-link-item" %>
         </li>
         <li class="nav-item loginBtn">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link", id: "nav-link-item"%>
+          <%= link_to "Log out", destroy_user_session_path,
+           method: :delete, class: "nav-link", id: "nav-link-item"%>
         </li>
        <!--  <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
