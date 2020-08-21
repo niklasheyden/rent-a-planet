@@ -1,9 +1,14 @@
-<div class="container">
+<div id="container">
 <h1>Create a new review for <%= @planet.name %></h1>
 
-<%= simple_form_for [@planet, @review] do |f| %>
-  <%= f.input :content %>
-  <%= f.input :rating %>
- <%= f.button :submit %>
-<% end %>
+<div class="form-inputs">
+  <%= simple_form_for [@planet, @review] do |f| %>
+    <%= f.input :content %>
+    <%= f.input :rating %>
+</div>
+<div class="form-actions btn-margin loginBtn align-center" id="primaryBtn">
+  <%= f.button :submit, id: 'submit-button', class:"links" %>
+</div>
+  <% end %>
+</div>
 </div>
