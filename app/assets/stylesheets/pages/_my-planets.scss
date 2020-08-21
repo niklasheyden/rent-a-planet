@@ -46,27 +46,28 @@
 }
 
 h2.booking-status {
-    color: #FCB449 !important;
-  }
+  color: #FCB449;
+}
 
-.action-dots {
+.booking-status.accepted {
+  color: green !important;
+}
+
+.booking-status.rejected {
+  color: #bc121a !important;
+}
+
+.button {
   padding: 10px;
+  background: rgb(32,32,32);
 }
 
-.action-dots a {
-  display: flex;
-  width: 30px;
-  justify-content: space-between;
-  .dot {
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 7px;
-    height: 7px;
-    border-radius:  50%;
-  }
+.icon{
+ width: 16px;
+ height: 16px;
 }
 
-.action-dots a:hover {
-  .dot {
-    background-color: white;
-    }
-  }
+
+.fa-times-circle {
+  color: white;
+}
