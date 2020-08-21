@@ -5,3 +5,9 @@ window.addEventListener('scroll', (event) => {
     document.getElementById("navbar").style.backgroundColor = "transparent";
   }
 })
+
+// let nav = document.getElementById("nav-item");
+// console.log(nav);
+// nav.addEventListener('hover', (event) => {
+//   document.getElementById("nav-link-item").style.color = 'white';
+// })

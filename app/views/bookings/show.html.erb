@@ -1,11 +1,29 @@
-<div>
-  <p>
-    You have booked
-    <%= @booking.planet.name %>
-  </p>
+<div id="booking-confirmation-container">
+
+  <div class="booking-summary">
+    <h1>
+      Thanks for booking
+      <%= @booking.planet.name %>
+    </h1>
+    <div class="booking-location-container">
+      <i class="fas fa-map-marker-alt"></i>
+      <h3>
+        <%= @booking.planet.location %>
+      </h3>
+    </div>
+    <h6> Checking Date <span class="light-font"><%= @booking.checkin_date %></span></h6>
+    <h6> Checkout Date <%= @booking.checkout_date %> </h6>
+    <div class="confirmation-button-container">
+      <div class="confirmation-button">
+         <%= link_to "My Bookings", bookings_path%>
+      </div>
+    </div>
+  </div>
+  <div class="booking-image"style="background-image: url('<%= cl_image_path @booking.planet.photos[0].key, crop: :fill %>')">
+
+  </div>
+
 </div>
 
-<p> Checkin Date <%= @booking.checkin_date %> </p>
-<p> Checkout Date <%= @booking.checkout_date %> </p>
-<%= link_to "Back to planets", planets_path%>
 
+<div class="img-big"></div>

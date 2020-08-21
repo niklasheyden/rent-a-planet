@@ -1,8 +1,7 @@
 <div class="container">
-
   <div class="shizzle">
-      <h1><%= @planet.name %></h1>
-      <p><%= @planet.price %>€/day</p>
+    <h1><%= @planet.name %></h1>
+    <p><%= @planet.price %>€/day</p>
   </div>
 
   <div class="planet-location">
@@ -11,26 +10,50 @@
   </div>
 
   <div class="grid-container">
-  <div class="img-big"></div>
-  <div class="img-small"></div>
-  <div class="img-small-2"></div>
-  <div class="img-small-3"></div>
-  <div class="img-small-4"></div>
+    <div class="img-big"style="background-image: url('<%= cl_image_path @planet.photos[0].key, crop: :fill %>')"></div>
+    <div class="img-small-1"style="background-image: url('<%= cl_image_path @planet.photos[1].key, crop: :fill %>') "></div>
+    <div class="img-small-2"style="background-image: url('<%= cl_image_path @planet.photos[2].key, crop: :fill %>')"></div>
+    <div class="img-small-3"style="background-image: url('<%= cl_image_path @planet.photos[3].key, crop: :fill %>')"></div>
+    <div class="img-small-4"style="background-image: url('<%= cl_image_path @planet.photos[4].key, crop: :fill %>')"></div>
+  </div>
+
+  <div class="grid-info">
+    <div class="title-capacity">
+      <h2>Beautiful and huge entire planet to rent in <br>the middle of the galaxy</h2>
+      <p>48 billion people capacity · 1 bed </p>
+    </div>
+      <div class="planet-description">
+        <p><%= @planet.description %></p>
+      </div>
+    <% if current_user.email != @planet.user.email %>
+      <div class="booking-button">
+        <%= link_to "Book this planet", new_planet_booking_path(@planet, @booking) %>
+      </div>
+      <% else %>
+      <div class="action-buttons">
+        <div class="action-button">
+          <%= link_to "Edit", edit_planet_path(@planet) %>
+        </div>
+        <div class="action-button">
+          <%= link_to "Delete", planet_path(@planet), method: :delete %>
+        </div>
+      </div>
+      <% end %>
+      <div class="user-photo-name"></div>
+    </div>
+    <%= link_to 'add a review', new_planet_review_path(@planet[:id])  %>
+</div>
+<div class="container">
+  <h3>Reviews</h3>
+<ul>
+<% @planet.reviews.each do |review| %>
+  <li><%= review.content %> | <%= review.rating %></li>
+<% end %>
+</ul>
 </div>
 
- <div class="grid-info">
-  <div class="title-capacity">
-    <h2>Beautiful and huge entire planet to rent in <br>the middle of the galaxy</h2>
-    <p>48 billion people capacity · 1 bed </p>
-  </div>
-  <div class="planet-description">
-    <p><%= @planet.description %></p>
-  </div>
-  <div class="booking-button">
-    <%= link_to "Book this planet", new_planet_booking_path(@planet, @booking) %>
-  </div>
-  <div class="user-photo-name"></div>
-</div>
 
-</div>
+
+
+
 

@@ -13,12 +13,25 @@
 }
 
 #nav-link-item {
-  color: white;
+  color: gray;
 }
 
-.nav-item a{
+.loginBtn {
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 0 6px;
+  margin-right: 10px;
+}
+
+.primary-color {
   color: white !important;
 }
+
+#primaryBtn {
+  background-color: #01C5BB;
+}
+
+
 
 // .navbar-nav{
 //   color: white;

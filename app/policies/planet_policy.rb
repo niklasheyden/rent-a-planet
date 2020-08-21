@@ -17,6 +17,10 @@ class PlanetPolicy < ApplicationPolicy
     true
   end
 
+  def edit?
+    record.user == user
+  end
+
   def update?
     record.user == user
     # - record: the planet passed to the `authorize` method in controller

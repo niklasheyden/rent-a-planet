@@ -1,5 +1,5 @@
 class PlanetsController < ApplicationController
-before_action :set_planet, only: [:show]
+before_action :set_planet, only: [:show, :edit, :update, :destroy]
 skip_before_action :authenticate_user!, only: :show
 
 
@@ -23,6 +23,25 @@ skip_before_action :authenticate_user!, only: :show
     end
   end
 
+  def edit
+    authorize @planet
+  end
+
+  def update
+    authorize @planet
+    if @planet.update(planet_params)
+      redirect_to planet_path(@planet), notice: 'Planet was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @planet.destroy
+    redirect_to planets_path, notice: 'Planet was successfully destroyed.'
+    authorize @planet
+  end
+
   def show
     authorize @planet
   end
@@ -30,7 +49,7 @@ skip_before_action :authenticate_user!, only: :show
   private
 
   def planet_params
-    params.require(:planet).permit(:name, :location, :price)
+    params.require(:planet).permit(:name, :location, :price, :description, photos: [])
   end
 
   def set_planet
