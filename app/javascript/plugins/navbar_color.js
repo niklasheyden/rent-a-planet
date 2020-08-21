@@ -1,6 +1,6 @@
 window.addEventListener('scroll', (event) => {
   if (!scrollY == 0) {
-    document.getElementById("navbar").style.backgroundColor = "black";
+    document.getElementById("navbar").style.backgroundColor = "rgb(18, 18, 18)";
   } else {
     document.getElementById("navbar").style.backgroundColor = "transparent";
   }

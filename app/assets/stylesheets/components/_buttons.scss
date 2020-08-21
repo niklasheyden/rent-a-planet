@@ -4,6 +4,9 @@
   border-radius: 20px;
   background: #01C5BB;
   transition: background 0.3s ease;
+    a:hover {
+      text-decoration: none !important;
+  }
 }
 
 .btn-create {
@@ -21,6 +24,10 @@
     padding: 0 6px;
     margin-left: 10px;
     padding: 5px 10px;
+  }
+  a:hover {
+    color:  white;
+    border: 1px solid white;
   }
 }
 

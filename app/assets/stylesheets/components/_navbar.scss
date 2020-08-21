@@ -1,7 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background-color: transparent;
-  //color: black;
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -16,9 +16,12 @@
   color: gray;
 }
 
+a:hover {
+  color: white !important;
+}
+
+
 .loginBtn {
-  border: 1px solid;
-  border-radius: 20px;
   padding: 0 6px;
   margin-right: 10px;
 }
@@ -31,8 +34,3 @@
   background-color: #01C5BB;
 }
 
-
-
-// .navbar-nav{
-//   color: white;
-// }
