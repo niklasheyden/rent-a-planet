@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
    def index
     @booking = policy_scope(Booking)
+    @planets = policy_scope(Planet)
     authorize @booking
   end
 

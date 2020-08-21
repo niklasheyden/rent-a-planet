@@ -1,7 +1,13 @@
 .footer-container {
   background-color: #0F0F0F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  height: 300px;
 }
 
 .content {
-  padding: 64px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
 }
