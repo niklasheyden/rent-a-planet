@@ -41,15 +41,20 @@
       <% end %>
       <div class="user-photo-name"></div>
     </div>
-    <%= link_to 'add a review', new_planet_review_path(@planet[:id])  %>
+     <%= link_to 'Add a review', new_planet_review_path(@planet[:id]), class: "btn btn-flat"  %>
 </div>
-<div class="container">
+<div class="review-container">
   <h3>Reviews</h3>
-<ul>
+    <div class="flat-line"></div>
+<div class="review-list">
 <% @planet.reviews.each do |review| %>
-  <li><%= review.content %> | <%= review.rating %></li>
+  <div class="review-items">
+    <p class="rating"> <% review.rating.times do %> <i class="far fa-star"></i> <% end %> </p>
+   <p class="content-review"> <%= review.content %> </p>
+   <p class="user">Reviewed by <%= %w(Pierre Niklas Arthur Manal Tom Alex).sample  %> </p>
+    </div>
 <% end %>
-</ul>
+</div>
 </div>
 
 

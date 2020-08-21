@@ -1,0 +1,44 @@
+.review-container{
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.review-list{
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+  gap: 32px 0px;
+}
+
+.review-items{
+  margin-left: 32px;
+  width: 60%;
+  height: 150px;
+  background-color: rgb(18, 18, 18);
+  border-radius: 30px;
+  border: solid grey 1px;
+  position: relative;
+}
+
+.review-items:hover{
+  box-shadow: 0 10px 10px 15px rgba(0,0,0,0.2);
+}
+
+.rating{
+  position: absolute;
+  bottom: 4px;
+  right:16px;
+}
+
+.user {
+  position: absolute;
+  bottom: 4px;
+  left: 64px;
+  font-style: italic;
+}
+.content-review {
+  position: absolute;
+  top: 16px;
+  left: 32px;
+}
