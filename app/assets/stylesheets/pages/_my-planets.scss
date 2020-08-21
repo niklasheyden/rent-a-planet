@@ -1,0 +1,72 @@
+#my-planets {
+  padding-top: 100px;
+}
+
+#upcoming-bookings {
+  margin-top: 100px;
+}
+
+.list-item {
+  height: 100px;
+  width: 1010px;
+  margin: 0 auto;
+  background-color: #202020;
+  border-radius: 12px;
+  display: flex;
+}
+
+.upcoming-list-image {
+  background-image: url("https://images.unsplash.com/photo-1537989036885-80b4d200958d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80");
+  background-size: cover;
+  height: 100px;
+  width: 160px;
+  border-radius: 12px 0px 0px 12px;
+}
+
+.upcoming-list-content {
+  width: 100%;
+  padding: 0px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-content-item h2 {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8 0 8 0;
+}
+
+.list-content-item p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  opacity: .7;
+  margin: 0;
+}
+
+h2.booking-status {
+    color: #FCB449 !important;
+  }
+
+.action-dots {
+  padding: 10px;
+}
+
+.action-dots a {
+  display: flex;
+  width: 30px;
+  justify-content: space-between;
+  .dot {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 7px;
+    height: 7px;
+    border-radius:  50%;
+  }
+}
+
+.action-dots a:hover {
+  .dot {
+    background-color: white;
+    }
+  }

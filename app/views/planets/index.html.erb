@@ -1,29 +1,80 @@
-<a id="planets"></a>
-<div class="container-home">
-  <h2 class="planet-selection">These are your planets</h2>
-  <div class="flat-line"></div>
-</div>
-
-<div class="cards-planet">
-  <% @planets.each do |planet| %>
-  <% if current_user == planet.user %>
-  <div class="card-planet">
-    <%= cl_image_tag planet.photos[0].key, crop: :fill, class: 'img' %>
-    <div class="card-planet-infos">
-      <div>
-        <h2 class="planet-name"><%= link_to planet.name, planet_path(planet), class: "planet-name"  %></h2>
-        <p><%= planet.location %> </p>
-      </div>
-      <h2 class="card-planet-pricing"><%= planet.price %>€/day</h2>
-      <i class="fas fa-map-marker-alt"></i>
+<div id="my-planets">
+  <div class="container-home">
+    <div class="title-section">
+      <h2 class="planet-selection">These are your planets</h2>
+      <div class="flat-line"></div>
     </div>
   </div>
-  <% end %>
-  <% end %>
+
+  <div class="cards-planet">
+    <% @planets.each do |planet| %>
+    <% if current_user == planet.user %>
+    <div class="card-planet">
+      <%= cl_image_tag planet.photos[0].key, crop: :fill, class: 'img' %>
+      <div class="card-planet-infos">
+        <div>
+          <h2 class="planet-name"><%= link_to planet.name, planet_path(planet), class: "planet-name"  %></h2>
+          <p><%= planet.location %> </p>
+        </div>
+        <h2 class="card-planet-pricing"><%= planet.price %>€/day</h2>
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+
+  <div class="create-button-container">
+    <% if  policy(Planet).new? %>
+      <%= link_to 'Create A Planet', new_planet_path, class: 'btn-flat btn-create' %>
+    <% end %>
+  </div>
 </div>
 
+<div id="upcoming-bookings">
+  <div class="container-home">
+    <div class="title-section">
+      <h2 class="planet-selection">Upcoming Bookings</h2>
+      <div class="flat-line"></div>
+    </div>
+  </div>
 
-<% if  policy(Planet).new? %>
-  <%= link_to 'Create A Planet', new_planet_path, class: 'btn-flat btn-create' %>
-<% end %>
+  <div id="upcoming-bookings-list">
+
+    <div class="list-item">
+
+      <div class="upcoming-list-image">
+      </div>
+
+      <div class="upcoming-list-content">
+
+        <div class="list-content-item">
+          <p>Planet</p>
+          <h2>Bobby Shmelly 3000</h2>
+        </div>
+
+        <div class="list-content-item">
+          <p>Booking  Date</p>
+          <h2>19.08. – 22.08.</h2>
+        </div>
+
+        <div class="list-content-item">
+          <p>Status</p>
+          <h2 class="booking-status">Pending</h2>
+        </div>
+
+        <div class="action-dots">
+          <a href="#">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
