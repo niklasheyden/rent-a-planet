@@ -9,5 +9,10 @@ class PagesController < ApplicationController
     else
       @planets = Planet.all
     end
+
+    respond_to do |format|
+      format.html
+      format.json { render json: { partial: render_to_string(partial: "planets/planets", formats: [:html]) } }
+    end
   end
 end
